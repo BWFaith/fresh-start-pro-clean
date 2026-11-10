@@ -1160,3 +1160,82 @@ nav .dd:focus-within .sub {
     margin-top: 38px;
   }
 }
+/* ===== RESPONSIVE FIX (keep this block at the very END of the file) ===== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .hero .hero-in {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    padding: 130px 20px 50px;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 9vw, 3.4rem);
+  }
+  .hero p.sub {
+    max-width: 100%;
+  }
+  .hcard {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .hcard::before {
+    inset: -14px;
+  }
+  .chip {
+    padding: 10px 14px;
+    font-size: 0.72rem;
+  }
+  .chip b {
+    font-size: 1.4rem;
+  }
+  .c1 {
+    left: -14px;
+  }
+  .c2 {
+    right: -14px;
+  }
+  .c3 {
+    left: -8px;
+  }
+  .hstats {
+    position: relative;
+  }
+  .hstats .wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .hstats .wrap > div {
+    border: 0;
+    padding: 0;
+  }
+  nav .sub {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    min-width: 0;
+    text-align: center;
+  }
+  nav .sub a {
+    padding: 6px 0;
+    font-size: 0.7rem;
+    color: var(--gold2);
+  }
+}
+@media (max-width: 480px) {
+  .hero .hero-in {
+    padding: 115px 18px 40px;
+  }
+  .hero .cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
